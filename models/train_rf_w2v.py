@@ -8,7 +8,7 @@ from sklearn.metrics import classification_report
 from trainer import *
 
 features = pd.read_csv('../data/w2v_features.csv')
-test_features = pd.read_csv('../data/w2v_test_features.csv')
+test_features = pd.read_csv('../data/w2v_features_test.csv')
 
 X = features[['feature_{0}'.format(index) for index in xrange(1,38)]].as_matrix()
 y = features['relevance'].as_matrix()

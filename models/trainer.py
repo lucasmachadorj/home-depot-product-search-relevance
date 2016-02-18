@@ -42,9 +42,5 @@ class Trainer:
 
 		# Print results
 		print("Grid scores on development set:")
-    	print()
-    	for params, mean_score, scores in clf.grid_scores_:
-			print("%0.3f (+/-%0.03f) for %r" % (mean_score, scores.std() * 2, params))
-			print('Best score found on development set: {0} \n'.format(CV_clf.best_score_))
-			print('Best parameters set found on development set:{0} \n'.format(CV_clf.best_params_))
+		print "best score: {}".format(CV_clf.best_score_)
 		return CV_clf.best_estimator_
